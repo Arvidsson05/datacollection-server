@@ -1,0 +1,10 @@
+/target
+/.vs
+output.json
+*kate-swp
+/*.json
+/downloads
+/src/downloads
+/src/*.json
+uploads
+credentials.json

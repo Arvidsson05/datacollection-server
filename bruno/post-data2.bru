@@ -1,0 +1,20 @@
+meta {
+  name: post-data2
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:8080/upload?token=password
+  body: multipartForm
+  auth: none
+}
+
+query {
+  token: password
+}
+
+body:multipart-form {
+  2023-11-29:1: test
+  2023-11-29:2: testtest123
+}

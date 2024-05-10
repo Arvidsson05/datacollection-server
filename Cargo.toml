@@ -1,0 +1,20 @@
+[package]
+name = "datacollectionserver"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.33.0", features = ["full", "signal", "macros", "rt-multi-thread", "sync"] }
+axum = { version = "0.6.20", features = ["headers", "http1",  "http2", "macros"] }
+serde = { version = "1.0.188", features = ["derive"] }
+tracing = "0.1.37"
+tracing-subscriber = "0.3.17"
+clap = { version = "4.4", features = ["derive"] }
+google-drive = "0.7"
+gcp_auth = "0.9"
+rocket-multipart-form-data = "0.10.6"
+multer = "2.1"
+futures-util = "0.3"
+cfg-if = "1.0"

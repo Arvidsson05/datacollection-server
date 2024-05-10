@@ -1,0 +1,46 @@
+meta {
+  name: post-data
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://127.0.0.1:8080/upload?token=password
+  body: multipartForm
+  auth: none
+}
+
+query {
+  token: password
+}
+
+headers {
+  file-name: json.json
+}
+
+body:text {
+  ----------------------------025143474645047995280409
+  Content-Disposition: form-data; name="body1"
+  
+  testvalues
+  ----------------------------025143474645047995280409
+  Content-Disposition: form-data; name="body2"
+  
+  values
+  ----------------------------025143474645047995280409
+  Content-Disposition: form-data; name="body3"
+  
+  3333333333
+  ----------------------------025143474645047995280409
+  Content-Disposition: form-data; name="body4"
+  
+  velueeees44
+  ----------------------------025143474645047995280409
+}
+
+body:multipart-form {
+  body1.json: testvalues
+  body2.txt: values
+  body3.rs: 3333333333
+  body4.conf: velueeees44
+}

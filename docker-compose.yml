@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  datacollectionserver:
+    build:
+      context: .
+    env_file:
+      - data-collection.env
+    ports:
+      - 8123:80
+    volumes:
+      - ./uploads:/uploads
+    secrets:
+      - gcp_credentials
+secrets:
+  gcp_credentials:
+    file: ./dimfrost-automation.json
